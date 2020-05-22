@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Actions from '../ui/molecules/Actions';
 import mockNotification from '../mockDatas/notificationCount/mockNotification';
-import { withKnobs, boolean } from "@storybook/addon-knobs";
+import { withKnobs, boolean, object } from "@storybook/addon-knobs";
 
 const notificationCount = mockNotification();
 
@@ -19,5 +19,5 @@ export default {
 };
 
 export const Action = () => {
-	return <Actions displayIcons={displayIcons} notificationCount={notificationCount} isWhite={boolean("White icones", true)}/>
+	return <Actions displayIcons={object('displayIcons', displayIcons)} notificationCount={notificationCount} isWhite={boolean('isWhite', true)}/>
 };
