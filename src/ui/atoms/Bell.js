@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import iconStyles from '../styles/Icons';
+
+const styles = iconStyles();
 
 const BellWrapper = styled.div`
   position: relative;
@@ -8,19 +11,21 @@ const BellWrapper = styled.div`
   
   &::after {
     position: absolute;
-    top: -5px;
+    top: -7px;
     right: -5px;
-    display: flex;
+    display: ${props => (props.count > 0 ? styles.display.flex : styles.display.none)};
     align-items: center;
     justify-content: center;
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: ${props => (props.count > 10 ? styles.width.big : styles.width.small)};
     color: #fff;
     background-color: red;
     font-family: 'Avenir', sans-serif;
     font-size: 12px;
     border-radius: 1000px;
-    content: "${props => (props.count ? props.count : '')}";
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    content: "${props => (props.count > 10 ? styles.content.gtTen : !props.count ? styles.content.ltZero : props.count)}";
   }
 `;
 

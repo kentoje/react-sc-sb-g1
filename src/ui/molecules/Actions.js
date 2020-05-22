@@ -27,7 +27,7 @@ const ActionsWrapper = styled.div `
   margin-top: 16px;
 
   div:nth-child(even) {
-    margin: 0px 18px;
+    margin: 0 18px;
   }
 
   svg {
@@ -58,9 +58,6 @@ Actions.propTypes = {
 
 Actions.defaultProps = {
   isWhite: false,
-  bubble: true,
-  bell: true,
-  loop: true,
 };
 
 export default Actions;
