@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import Bell from "../atom/Bell"
-import Bubble from "../atom/Bubble"
-import Zoom from "../atom/Zoom"
+import Bell from "../atoms/Bell"
+import Bubble from "../atoms/Bubble"
+import Zoom from "../atoms/Zoom"
 
 const ActionsWrapper = styled.div`
   display: flex;
@@ -13,6 +13,10 @@ const ActionsWrapper = styled.div`
 
   div {
     cursor: pointer;
+  }
+
+  svg {
+    filter: invert(1);
   }
 `;
 
