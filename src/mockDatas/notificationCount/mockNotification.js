@@ -1,4 +1,4 @@
-export default function mockData() {
+export default function() {
   return {
     bell: 0,
     bubble: 12,
