@@ -1,33 +1,33 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
-
 import Bell from "../atoms/Bell"
 import Bubble from "../atoms/Bubble"
 import Zoom from "../atoms/Zoom"
+import Filters from "../particles/Filters";
+import PropTypes from "prop-types";
 
-const ActionsWrapper = styled.div`
+const ActionsWrapper = styled.div `
   display: flex;
-  margin: auto;
-  margin-left: 15px;
-  margin-right: 15px;
-
-  div {
-    cursor: pointer;
-  }
 
   svg {
-    filter: invert(1);
+    filter: ${props => (props.isWhite ? Filters.invert_false : Filters.invert_true)};
+    cursor: pointer;
   }
 `;
 
-const Actions = props => {
-  const { bell, bubble, loop } = props;
+const Actions = (props) => {
+  const {
+    bell,
+    bubble,
+    loop,
+    isWhite
+  } = props;
+
   return (
-    <ActionsWrapper>
-      { bell && <Bell />}
-      { bubble && <Bubble />}
-      { loop && <Zoom />}
+    <ActionsWrapper isWhite={isWhite}>
+      {bell && <Bell />}
+      {bubble && <Bubble />}
+      {loop && <Zoom />}
     </ActionsWrapper>
   );
 };
@@ -35,8 +35,12 @@ const Actions = props => {
 Actions.propTypes = {
   bell: PropTypes.bool,
   bubble: PropTypes.bool,
-  loop: PropTypes.bool
+  loop: PropTypes.bool,
+  isWhite: PropTypes.bool,
 };
 
+Actions.defaultProps = {
+  isWhite: false,
+};
 
 export default Actions;
