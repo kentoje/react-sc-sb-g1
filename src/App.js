@@ -1,19 +1,18 @@
 import React from "react";
-import Badge, { colors } from "./ui/atoms/Badge";
-import Actions from './ui/molecules/Actions'
+import Actions from './ui/molecules/Actions';
+import mockNotification from './mockDatas/notificationCount/mockNotification';
+
+const notificationCount = mockNotification();
+const displayIcons = {
+  bell: true,
+  bubble: true,
+  zoom: true,
+};
 
 export default function App() {
-  const displayIcons = {
-    bell: true,
-    bubble: true,
-    zoom: true,
-  };
-
   return (
     <div className="App">
-      <Badge text="IRL" color={colors.purple}/>
-      <Badge text="IRL" color={colors.grey}/>
-      <Actions displayIcons={displayIcons} />
+      <Actions displayIcons={displayIcons} notificationCount={notificationCount} />
     </div>
   );
 }

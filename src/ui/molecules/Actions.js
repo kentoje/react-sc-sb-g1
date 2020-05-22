@@ -24,6 +24,7 @@ const iconsComponents = {
 
 const ActionsWrapper = styled.div `
   display: flex;
+  margin-top: 16px;
 
   div:nth-child(even) {
     margin: 0px 18px;
@@ -39,17 +40,19 @@ const Actions = (props) => {
   const {
     displayIcons,
     isWhite,
+    notificationCount,
   } = props;
 
   return (
-    <ActionsWrapper isWhite={isWhite} displayIcons={displayIcons}>
-      {getIconsComponents(displayIcons, iconsComponents)}
+    <ActionsWrapper isWhite={isWhite} displayIcons={displayIcons} notificationCount={notificationCount}>
+      {getIconsComponents(displayIcons, iconsComponents, notificationCount)}
     </ActionsWrapper>
   );
 };
 
 Actions.propTypes = {
   displayIcons: PropTypes.object,
+  notificationCount: PropTypes.object,
   isWhite: PropTypes.bool,
 };
 
