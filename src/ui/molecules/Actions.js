@@ -41,6 +41,9 @@ Actions.propTypes = {
 
 Actions.defaultProps = {
   isWhite: false,
+  bubble: true,
+  bell: true,
+  loop: true,
 };
 
 export default Actions;
