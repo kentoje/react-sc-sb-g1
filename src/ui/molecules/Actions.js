@@ -5,6 +5,22 @@ import Bubble from "../atoms/Bubble"
 import Zoom from "../atoms/Zoom"
 import Filters from "../particles/Filters";
 import PropTypes from "prop-types";
+import getIconsComponents from "../../libraries/methods/getIconsComponents";
+
+const iconsComponents = {
+  bell: {
+    id: 1,
+    component: Bell,
+  },
+  bubble: {
+    id: 2,
+    component: Bubble,
+  },
+  zoom: {
+    id: 3,
+    component: Zoom,
+  },
+};
 
 const ActionsWrapper = styled.div `
   display: flex;
@@ -17,25 +33,19 @@ const ActionsWrapper = styled.div `
 
 const Actions = (props) => {
   const {
-    bell,
-    bubble,
-    loop,
-    isWhite
+    displayIcons,
+    isWhite,
   } = props;
 
   return (
-    <ActionsWrapper isWhite={isWhite}>
-      {bell && <Bell />}
-      {bubble && <Bubble />}
-      {loop && <Zoom />}
+    <ActionsWrapper isWhite={isWhite} displayIcons={displayIcons}>
+      {getIconsComponents(displayIcons, iconsComponents)}
     </ActionsWrapper>
   );
 };
 
 Actions.propTypes = {
-  bell: PropTypes.bool,
-  bubble: PropTypes.bool,
-  loop: PropTypes.bool,
+  displayIcons: PropTypes.object,
   isWhite: PropTypes.bool,
 };
 
