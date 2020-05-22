@@ -7,7 +7,7 @@ export default function App() {
             <div className="App">
                 <Badge text="IRL" color={colors.purple}/>
                 <Badge text="IRL" color={colors.grey}/>
-                <Actions bell="false" bubble="true" loop="true" />
+                <Actions bell={true} bubble={true} loop={true} />
             </div>
       );
 }

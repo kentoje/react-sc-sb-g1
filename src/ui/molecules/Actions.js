@@ -25,17 +25,17 @@ const Actions = props => {
   const { bell, bubble, loop } = props;
   return (
     <ActionsWrapper>
-      { bell === "true" && <Bell />}
-      { bubble === "true" && <Bubble />}
-      { loop === "true" && <Zoom />}
+      { bell && <Bell />}
+      { bubble && <Bubble />}
+      { loop && <Zoom />}
     </ActionsWrapper>
   );
 };
 
 Actions.propTypes = {
-  bell: PropTypes.string,
-  bubble: PropTypes.string,
-  loop: PropTypes.string
+  bell: PropTypes.bool,
+  bubble: PropTypes.bool,
+  loop: PropTypes.bool
 };
 
 
