@@ -6,9 +6,9 @@ import Bubble from '../ui/atoms/Bubble';
 import { withKnobs } from "@storybook/addon-knobs";
 
 export default {
-    title: 'Icons',
-    component: Bell,
-    decorators: [withKnobs]
+  title: 'Icons',
+  component: Bell,
+  decorators: [withKnobs]
 };
 
 export const BellIcon = () => <Bell />;

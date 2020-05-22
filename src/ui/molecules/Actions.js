@@ -25,6 +25,10 @@ const iconsComponents = {
 const ActionsWrapper = styled.div `
   display: flex;
 
+  div:nth-child(even) {
+    margin: 0px 18px;
+  }
+
   svg {
     filter: ${props => (props.isWhite ? Filters.invert_false : Filters.invert_true)};
     cursor: pointer;
