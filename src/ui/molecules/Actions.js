@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Bell from "../atoms/Bell"
@@ -20,14 +21,22 @@ const ActionsWrapper = styled.div`
   }
 `;
 
-const Actions = () => {
+const Actions = props => {
+  const { bell, bubble, loop } = props;
   return (
     <ActionsWrapper>
-      <Bell />
-      <Bubble />
-      <Zoom />
+      { bell === "true" && <Bell />}
+      { bubble === "true" && <Bubble />}
+      { loop === "true" && <Zoom />}
     </ActionsWrapper>
   );
 };
+
+Actions.propTypes = {
+  bell: PropTypes.string,
+  bubble: PropTypes.string,
+  loop: PropTypes.string
+};
+
 
 export default Actions;
