@@ -1,11 +1,11 @@
-import React from "react";
-import styled  from "styled-components";
-import PropTypes from "prop-types";
-import Colors from "../particles/Colors";
+import React from 'react';
+import styled  from 'styled-components';
+import PropTypes from 'prop-types';
+import Colors from '../particles/Colors';
 
 export const colors = {
-    purple: "purple",
-    grey: "grey"
+    purple: 'purple',
+    grey: 'grey',
 };
 
 const BadgeWrapper = styled.span`

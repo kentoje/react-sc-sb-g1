@@ -1,7 +1,7 @@
 import React from 'react';
 import Actions from '../ui/molecules/Actions';
 import mockNotification from '../mockDatas/notificationCount/mockNotification';
-import { withKnobs, boolean, object } from "@storybook/addon-knobs";
+import { withKnobs, boolean, object } from '@storybook/addon-knobs';
 
 const notificationCount = mockNotification();
 

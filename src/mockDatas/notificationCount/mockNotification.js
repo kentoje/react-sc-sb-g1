@@ -1,6 +1,6 @@
 export default function() {
   return {
-    bell: 0,
-    bubble: 12,
+    bell: 4,
+    bubble: 11,
   };
 }

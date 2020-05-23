@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import Bell from "../atoms/Bell"
-import Bubble from "../atoms/Bubble"
-import Zoom from "../atoms/Zoom"
-import Filters from "../particles/Filters";
-import PropTypes from "prop-types";
-import getIconsComponents from "../../libraries/methods/getIconsComponents";
+import React from 'react';
+import styled from 'styled-components';
+import Bell from '../atoms/Bell'
+import Bubble from '../atoms/Bubble'
+import Zoom from '../atoms/Zoom'
+import Filters from '../particles/Filters';
+import PropTypes from 'prop-types';
+import getIconsComponents from '../../libraries/methods/getIconsComponents';
 
 const iconsComponents = {
   bell: {
@@ -26,7 +26,7 @@ const ActionsWrapper = styled.div `
   display: flex;
   margin-top: 16px;
 
-  div:nth-child(even) {
+  button:nth-child(even) {
     margin: 0 18px;
   }
 

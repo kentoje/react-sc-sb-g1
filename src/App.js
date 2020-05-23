@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Actions from './ui/molecules/Actions';
 import mockNotification from './mockDatas/notificationCount/mockNotification';
 
