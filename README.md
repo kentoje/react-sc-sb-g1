@@ -7,15 +7,15 @@
 
 ## Useful commands:
 
-* For installing dependencies : 
+* Installing dependencies:
 ``` shell
 npm i
 ``` 
-* To run the project: 
+* Run the project:
 ``` shell
 npm run start
 ``` 
-* To run storybook: 
+* Run storybook:
 ``` shell
 npm run storybook
 ```
@@ -23,8 +23,11 @@ npm run storybook
 ---
 
 ## Documentation:
+
+### Dark theme
 ![alt text](https://github.com/kentoje/react-sc-sb-g1/blob/master/images/documentation/dark-mode.png)
 
 ---
 
+### Light theme
 ![alt text](https://github.com/kentoje/react-sc-sb-g1/blob/master/images/documentation/light-mode.png)
